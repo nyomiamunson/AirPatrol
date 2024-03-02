@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2664031985163179271}
   m_Layer: 0
   m_Name: Player Bullet
-  m_TagString: Untagged
+  m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,3 +174,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e37c9aece83d41c09ea5c99c2e877a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5

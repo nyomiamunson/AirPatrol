@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Transform attackPoint;
 
+    [SerializeField] GameObject explosionGO;
+
 
     // Start is called before the first frame update
     void Start()
@@ -66,5 +68,23 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(playerBullet, attackPoint.position, Quaternion.identity);
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Detect collisions of the player ship with an imposter or crewmate
+        if((collision.tag == "Imposter"))
+        {
+            PlayExplosion();
+            Destroy(gameObject); // Destroy the player's ship
+        }    
+    }
+
+    void PlayExplosion()
+    {
+        GameObject explosion = (GameObject)Instantiate(explosionGO);
+
+        // Set the position of the explosion
+        explosion.transform.position = transform.position;
     }
 }

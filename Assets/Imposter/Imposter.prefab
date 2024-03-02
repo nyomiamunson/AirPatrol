@@ -274,3 +274,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMin: 2
   speedMax: 5
+  explosionGO: {fileID: 4113011641767396583, guid: 57f5e35c96bbd4c87b32611091de8b23, type: 3}

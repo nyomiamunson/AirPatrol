@@ -24,4 +24,13 @@ public class BulletScript : MonoBehaviour
         temp.x += speed * Time.deltaTime;
         transform.position = temp;
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Detect collisions of the player bullet with an imposter or crewmate
+        if ((collision.tag == "Imposter"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
